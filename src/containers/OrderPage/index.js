@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { getOrders } from "../../actions";
 import Layout from "../../components/Layout";
 import Card from "../../components/UI/Card";
-import { BiRupee } from "react-icons/bi";
+
 import { IoIosArrowForward } from "react-icons/io";
 
 import "./style.css";
@@ -52,7 +52,7 @@ const OrderPage = (props) => {
                 <div className="orderRow">
                   <div className="orderName">{item.productId.name}</div>
                   <div className="orderPrice">
-                    <BiRupee />
+                    Rs.
                     {item.payablePrice}
                   </div>
                   <div>{order.paymentStatus}</div>

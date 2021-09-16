@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsBySlug } from "../../../actions";
 import Card from "../../../components/UI/Card";
-import { BiRupee } from "react-icons/bi";
+
 import { Link } from "react-router-dom";
 
 import "./style.css";
@@ -41,7 +41,7 @@ const ClothingAndAccessories = (props) => {
             <div>
               <div className="caProductName">{product.name}</div>
               <div className="caProductPrice">
-                <BiRupee />
+                Rs.
                 {product.price}
               </div>
             </div>
