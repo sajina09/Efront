@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import flipkartLogo from "../../images/logo/flipkart.png";
+import flipkartLogo from "../../images/logo/headerlogo.png";
 import goldenStar from "../../images/logo/golden-star.png";
 import { IoIosArrowDown, IoIosCart, IoIosSearch } from "react-icons/io";
 import {
