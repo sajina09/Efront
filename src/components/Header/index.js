@@ -74,8 +74,8 @@ const Header = (props) => {
         menu={<a className="fullName">{auth.user.fullName}</a>}
         menus={[
           { label: "My Profile", href: "", icon: null },
-          { label: "SuperCoin Zone", href: "", icon: null },
-          { label: "Flipkart Plus Zone", href: "", icon: null },
+          { label: "Deal Zone", href: "", icon: null },
+          { label: "Deal Zone", href: "", icon: null },
           {
             label: "Orders",
             href: `/account/orders`,
@@ -118,9 +118,7 @@ const Header = (props) => {
               !auth.authenticate && setLoginModal(true);
             },
           },
-          { label: "Wishlist", href: "", icon: null },
-          { label: "Rewards", href: "", icon: null },
-          { label: "Gift Cards", href: "", icon: null },
+          
         ]}
         firstMenu={
           <div className="firstmenu">
@@ -130,7 +128,7 @@ const Header = (props) => {
                 setLoginModal(true);
                 setSignup(true);
               }}
-              style={{ color: "#2874f0" }}
+              style={{ color: "#59B791" }}
             >
               Sign Up
             </a>
@@ -152,7 +150,7 @@ const Header = (props) => {
             <div className="rightspace">
               <div className="loginInputContainer">
                 {auth.error && (
-                  <div style={{ color: "red", fontSize: 12 }}>{auth.error}</div>
+                  <div style={{ color: "green", fontSize: 12 }}>{auth.error}</div>
                 )}
                 {signup && (
                   <MaterialInput
@@ -186,7 +184,7 @@ const Header = (props) => {
                 />
                 <MaterialButton
                   title={signup ? "Register" : "Login"}
-                  bgColor="#fb641b"
+                  bgColor="#59B791" //login ko color
                   textColor="#ffffff"
                   style={{
                     margin: "40px 0 20px 0",
@@ -197,7 +195,7 @@ const Header = (props) => {
                 <MaterialButton
                   title="Request OTP"
                   bgColor="#ffffff"
-                  textColor="#2874f0"
+                  textColor="#59B791"
                   style={{
                     margin: "20px 0",
                   }}
@@ -235,7 +233,7 @@ const Header = (props) => {
             <div className="searchIconContainer">
               <IoIosSearch
                 style={{
-                  color: "#2874f0",
+                  color: "#59B791",
                 }}
               />
             </div>
@@ -254,11 +252,10 @@ const Header = (props) => {
               </a>
             }
             menus={[
-              { label: "Notification Preference", href: "", icon: null },
-              { label: "Sell on flipkart", href: "", icon: null },
-              { label: "24x7 Customer Care", href: "", icon: null },
+              { label: "Notification ", href: "", icon: null },
+              { label: "Sell on EAgro", href: "", icon: null },
               { label: "Advertise", href: "", icon: null },
-              { label: "Download App", href: "", icon: null },
+              { label: "Sign Up", href: "", icon: null },
             ]}
           />
           <div>

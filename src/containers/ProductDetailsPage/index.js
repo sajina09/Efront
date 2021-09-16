@@ -57,7 +57,7 @@ const ProductDetailsPage = (props) => {
             <div className="flexRow">
               <MaterialButton
                 title="ADD TO CART"
-                bgColor="#ff9f00"
+                bgColor="#59B791"
                 textColor="#ffffff"
                 style={{
                   marginRight: "5px",
