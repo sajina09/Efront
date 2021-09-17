@@ -67,7 +67,7 @@ const MaterialInput = (props) => {
         <div
           style={{
             fontSize: "10px",
-            color: "red",
+            color: "#59B791",
             fontWeight: 500,
           }}
         >{`${props.label} is Required`}</div>

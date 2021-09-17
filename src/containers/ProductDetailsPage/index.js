@@ -91,11 +91,11 @@ const ProductDetailsPage = (props) => {
                 <IoIosArrowForward />
               </li>
               <li>
-                <a href="#">Mobiles</a>
+                <a href="#">Fruits</a>
                 <IoIosArrowForward />
               </li>
               <li>
-                <a href="#">Samsung</a>
+                <a href="#">Summer Fruits</a>
                 <IoIosArrowForward />
               </li>
               <li>
@@ -115,8 +115,7 @@ const ProductDetailsPage = (props) => {
               </span>
             </div>
             <div className="extraOffer">
-              Extra Rs.
-              4500 off{" "}
+              {" "}
             </div>
             <div className="flexRow priceContainer">
               <span className="price">
@@ -124,7 +123,7 @@ const ProductDetailsPage = (props) => {
                 {product.productDetails.price}
               </span>
               <span className="discount" style={{ margin: "0 10px" }}>
-                22% off
+                2% off
               </span>
               {/* <span>i</span> */}
             </div>
