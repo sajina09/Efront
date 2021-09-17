@@ -49,8 +49,9 @@ const CartItem = (props) => {
       >
         {/* quantity control */}
         <div className="quantityControl">
-          <button onClick={onQuantityDecrement}>-</button>
+          <button onClick={onQuantityDecrement,PriceIncreament}>-</button>
           <input value={qty} readOnly />
+          <input value={price} readOnly />
           <button onClick={onQuantityIncrement,PriceIncreament}>+</button>
         </div>
         <button className="cartActionBtn">save for later</button>
