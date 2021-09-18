@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import flipkartLogo from "../../images/logo/headerlogo.png";
-import goldenStar from "../../images/logo/golden-star.png";
+import headerLogo from "../../images/logo/headerlogo.png";
+
 import { IoIosArrowDown, IoIosCart, IoIosSearch } from "react-icons/io";
 import {
   Modal,
@@ -82,7 +82,6 @@ const Header = (props) => {
             icon: null,
           },
           { label: "Wishlist", href: "", icon: null },
-          { label: "My Chats", href: "", icon: null },
           { label: "Coupons", href: "", icon: null },
           { label: "Rewards", href: "", icon: null },
           { label: "Notifications", href: "", icon: null },
@@ -109,7 +108,7 @@ const Header = (props) => {
         }
         menus={[
           { label: "My Profile", href: "", icon: null },
-          { label: "Flipkart Plus Zone", href: "", icon: null },
+          { label: "News", href: "", icon: null },
           {
             label: "Orders",
             href: `/account/orders`,
@@ -144,7 +143,7 @@ const Header = (props) => {
         <div className="authContainer">
           <div className="row">
             <div className="leftspace">
-              <h2>Login</h2>
+              <h2>Welcome</h2>
               <p>Get access to your Orders, Wishlist and Recommendations</p>
             </div>
             <div className="rightspace">
@@ -180,7 +179,7 @@ const Header = (props) => {
                   label="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  // rightElement={<a href="#">Forgot?</a>}
+                  //rightElement={<a href="#">Forgot?</a>}
                 />
                 <MaterialButton
                   title={signup ? "Register" : "Login"}
@@ -209,12 +208,11 @@ const Header = (props) => {
         {/* Logo  */}
         <div className="logo">
           <a href="">
-            <img src={flipkartLogo} className="logoimage" alt="" />
+            <img src={headerLogo} className="logoimage" alt="" />
           </a>
           <a style={{ marginTop: "-10px" }}>
-            <span className="exploreText">Explore</span>
-            <span className="plusText">Plus</span>
-            <img src={goldenStar} className="goldenStar" alt="" />
+            
+            
           </a>
         </div>
         {/* logo ends here */}

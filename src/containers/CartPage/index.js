@@ -93,7 +93,7 @@ const CartPage = (props) => {
             style={{
               width: "100%",
               display: "flex",
-              background: "#59B791",
+              background: "#ffffff",
               justifyContent: "flex-end",
               boxShadow: "0 0 10px 10px #eee",
               padding: "10px 0",
