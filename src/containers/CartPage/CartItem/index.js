@@ -9,16 +9,11 @@ import "./style.css";
 const CartItem = (props) => {
   const [qty, setQty] = useState(props.cartItem.qty);
   const [pric, setPrice] = useState(props.cartItem.price);
-
+  console.log({pric});
   const { _id, name, img , price} = props.cartItem;
-
   const onQuantityIncrement = () => {
     setQty(qty + 1);
     props.onQuantityInc(_id, qty + 1);
-  };
-  const PriceIncreament  = () => {
-    setPrice(qty + 1);
-    props.onPriceInc(_id, pric*qty);
   };
 
   const onQuantityDecrement = () => {
@@ -49,10 +44,10 @@ const CartItem = (props) => {
       >
         {/* quantity control */}
         <div className="quantityControl">
-          <button onClick={onQuantityDecrement,PriceIncreament}>-</button>
+          <button onClick={onQuantityDecrement}>-</button>
           <input value={qty} readOnly />
           
-          <button onClick={onQuantityIncrement,PriceIncreament}>+</button>
+          <button onClick={onQuantityIncrement}>+</button>
         </div>
         <button className="cartActionBtn">save for later</button>
         <button

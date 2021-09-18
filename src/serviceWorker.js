@@ -88,7 +88,7 @@ function registerValidSW(swUrl, config) {
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
               }
-            }
+            } 
           }
         };
       };
