@@ -10,7 +10,7 @@ import "./style.css";
  * @author
  * @function ProductListPage
  **/
-
+ 
 const ProductListPage = (props) => {
   const renderProduct = () => {
     console.log(props);

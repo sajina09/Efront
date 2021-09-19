@@ -75,7 +75,6 @@ const Header = (props) => {
         menus={[
           { label: "My Profile", href: "", icon: null },
           { label: "Deal Zone", href: "", icon: null },
-          { label: "Deal Zone", href: "", icon: null },
           {
             label: "Orders",
             href: `/account/orders`,
@@ -207,12 +206,10 @@ const Header = (props) => {
       <div className="subHeader">
         {/* Logo  */}
         <div className="logo">
-          <a href="">
+          <a href="http://localhost:3000">
             <img src={headerLogo} className="logoimage" alt="" />
           </a>
           <a style={{ marginTop: "-10px" }}>
-            
-            
           </a>
         </div>
         {/* logo ends here */}
@@ -253,7 +250,6 @@ const Header = (props) => {
               { label: "Notification ", href: "", icon: null },
               { label: "Sell on EAgro", href: "", icon: null },
               { label: "Advertise", href: "", icon: null },
-              { label: "Sign Up", href: "", icon: null },
             ]}
           />
           <div>

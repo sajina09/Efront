@@ -117,14 +117,19 @@ const ProductDetailsPage = (props) => {
             <div className="extraOffer">
               {" "}
             </div>
+            <div style={{display:"flex", flexDirection:"column"}}>
             <div className="flexRow priceContainer">
               <span className="price">
                 
-                {product.productDetails.price}
+                <div>{product.productDetails.price} </div>
+                {/* <div>{product.productDetails.quantity}</div> */}
               </span>
+             </div>
               <span className="discount" style={{ margin: "0 10px" }}>
                 2% off
               </span>
+              <br/>
+              
               {/* <span>i</span> */}
             </div>
             <div>
