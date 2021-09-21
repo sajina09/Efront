@@ -8,6 +8,7 @@ import { AiFillThunderbolt } from "react-icons/ai";
 import { MaterialButton } from "../../components/MaterialUI";
 import "./style.css";
 import { addToCart } from "../../actions";
+import { generatePublicUrl } from "../../urlConfig";
 
 /**
  * @author
@@ -41,14 +42,14 @@ const ProductDetailsPage = (props) => {
           <div className="verticalImageStack">
             {product.productDetails.productPictures.map((thumb, index) => (
               <div className="thumbnail">
-                <img src={thumb.img} alt={thumb.img} />
+                <img src={generatePublicUrl(thumb.img)} alt={thumb.img} />
               </div>
             ))}
           </div>
           <div className="productDescContainer">
             <div className="productDescImgContainer">
               <img
-                src={product.productDetails.productPictures[0].img}
+                src={generatePublicUrl(product.productDetails.productPictures[0].img)}
                 alt={`${product.productDetails.productPictures[0].img}`}
               />
             </div>
@@ -117,18 +118,26 @@ const ProductDetailsPage = (props) => {
             <div className="extraOffer">
               {" "}
             </div>
+            <div style={{display:"flex", flexDirection:"column"}}>
             <div className="flexRow priceContainer">
               <span className="price">
                 
-                {product.productDetails.price}
+                <div>{product.productDetails.price} </div>
+                {/* <div>{product.productDetails.quantity}</div> */}
               </span>
+<<<<<<< HEAD
               <span className="quantity">
                 
                 {product.productDetails.quantity}
               </span>
+=======
+             </div>
+>>>>>>> f78879daeb294191ab1a63b26ddb1aff2160dc1a
               <span className="discount" style={{ margin: "0 10px" }}>
                 2% off
               </span>
+              <br/>
+              
               {/* <span>i</span> */}
             </div>
             <div>

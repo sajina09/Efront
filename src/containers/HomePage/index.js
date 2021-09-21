@@ -13,6 +13,7 @@ import fimag1 from "../../images/logo/fimag1.png";
 const HomePage = (props) => {
   return(
     <Layout>
+<<<<<<< HEAD
       Home Page 
       <a className="fimag1">
           <a href="">
@@ -23,6 +24,9 @@ const HomePage = (props) => {
         
         </a>
       
+=======
+      Home Page  
+>>>>>>> f78879daeb294191ab1a63b26ddb1aff2160dc1a
     </Layout>
    )
 
