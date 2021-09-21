@@ -70,7 +70,6 @@ const CartPage = (props) => {
       </>
     );
   }
-
   return (
     <Layout>
       <div className="cartContainer" style={{ alignItems: "flex-start" }}>

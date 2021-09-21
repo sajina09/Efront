@@ -9,6 +9,8 @@ import { MaterialButton } from "../../components/MaterialUI";
 import "./style.css";
 import { addToCart } from "../../actions";
 import { generatePublicUrl } from "../../urlConfig";
+import { getAllCategory } from '../../actions';
+
 
 /**
  * @author
@@ -17,7 +19,28 @@ import { generatePublicUrl } from "../../urlConfig";
 
 const ProductDetailsPage = (props) => {
   const dispatch = useDispatch();
+  const category = useSelector(state => state.category);
+  console.log({category});
   const product = useSelector((state) => state.product);
+
+  const renderCategories = (categories) => {
+    let myCategories = [];
+    for (let category of categories) {
+      myCategories.push(
+        <li key={category.name}>
+          {
+            category.parentId ? <a
+              href={`/${category.slug}?cid=${category._id}&type=${category.type}`}>
+              {category.name}
+            </a> :
+            <span>{category.name}</span>
+          }
+          {category.children.length > 0 ? (<ul>{renderCategories(category.children)}</ul>) : null}
+        </li>
+      );
+    }
+    return myCategories;
+  }
 
   useEffect(() => {
     const { productId } = props.match.params;
@@ -92,8 +115,8 @@ const ProductDetailsPage = (props) => {
                 <IoIosArrowForward />
               </li>
               <li>
-                <a href="#">Fruits</a>
-                <IoIosArrowForward />
+{/*              <a href="#">{category.categories[0].children[0].name}</a>
+ */}                 <IoIosArrowForward />
               </li>
               <li>
                 <a href="#">Summer Fruits</a>
@@ -112,7 +135,7 @@ const ProductDetailsPage = (props) => {
                 4.3 <IoIosStar />
               </span>
               <span className="ratingNumbersReviews">
-                72,234 Ratings & 8,140 Reviews
+                10 Ratings & 42 Reviews
               </span>
             </div>
             <div className="extraOffer">
