@@ -135,7 +135,7 @@ const ProductDetailsPage = (props) => {
                 4.3 <IoIosStar />
               </span>
               <span className="ratingNumbersReviews">
-                10 Ratings & 42 Reviews
+                10 Ratings & 57 Reviews
               </span>
             </div>
             <div className="extraOffer">
@@ -150,7 +150,7 @@ const ProductDetailsPage = (props) => {
               </span>
              </div>
               <span className="discount" style={{ margin: "0 10px" }}>
-                2% off
+                3% off
               </span>
               <br/>
               
