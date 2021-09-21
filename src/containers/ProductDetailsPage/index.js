@@ -9,13 +9,8 @@ import { MaterialButton } from "../../components/MaterialUI";
 import "./style.css";
 import { addToCart } from "../../actions";
 import { generatePublicUrl } from "../../urlConfig";
-import { getAllCategory } from '../../actions';
 
 
-/**
- * @author
- * @function ProductDetailsPage
- **/
 
 const ProductDetailsPage = (props) => {
   const dispatch = useDispatch();
@@ -56,7 +51,7 @@ const ProductDetailsPage = (props) => {
   if (Object.keys(product.productDetails).length === 0) {
     return null;
   }
-
+console.log(product.productDetails)
   return (
     <Layout>
       {/* <div>{product.productDetails.name}</div> */}
@@ -115,6 +110,7 @@ const ProductDetailsPage = (props) => {
                 <IoIosArrowForward />
               </li>
               <li>
+              <a href="#">Fruits</a>
 {/*              <a href="#">{category.categories[0].children[0].name}</a>
  */}                 <IoIosArrowForward />
               </li>
@@ -187,6 +183,49 @@ const ProductDetailsPage = (props) => {
                   {product.productDetails.description}
                 </span>
               </p>
+              <p style={{ display: "flex" }}>
+                <span
+                  style={{
+                    width: "100px",
+                    fontSize: "12px",
+                    color: "#878787",
+                    fontWeight: "600",
+                    marginRight: "20px",
+                  }}
+                >
+                  Manufacture :
+                </span>
+                <span
+                  style={{
+                    fontSize: "12px",
+                    color: "#212121",
+                  }}
+                >
+                  {product.productDetails.manufacture}
+                </span> 
+              </p>
+              <p style={{ display: "flex" }}>
+                <span
+                  style={{
+                    width: "100px",
+                    fontSize: "12px",
+                    color: "#878787",
+                    fontWeight: "600",
+                    marginRight: "20px",
+                  }}
+                >
+                  Expiry date : 
+                </span>
+                <span
+                  style={{
+                    fontSize: "12px",
+                    color: "#212121",
+                  }}
+                >
+                  {product.productDetails.expiry}
+                </span>
+              </p>
+             
             </div>
           </div>
         </div>
