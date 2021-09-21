@@ -84,7 +84,7 @@ const ProductDetailsPage = (props) => {
         </div>
         <div>
           {/* home > category > subCategory > productName */}
-          <div className="breed">
+          //{/* <div className="breed">
             <ul>
               <li>
                 <a href="#">Home</a>
@@ -102,7 +102,7 @@ const ProductDetailsPage = (props) => {
                 <a href="#">{product.productDetails.name}</a>
               </li>
             </ul>
-          </div>
+          </div> */}
           {/* product description */}
           <div className="productDetails">
             <p className="productTitle">{product.productDetails.name}</p>
@@ -121,6 +121,10 @@ const ProductDetailsPage = (props) => {
               <span className="price">
                 
                 {product.productDetails.price}
+              </span>
+              <span className="quantity">
+                
+                {product.productDetails.quantity}
               </span>
               <span className="discount" style={{ margin: "0 10px" }}>
                 2% off
