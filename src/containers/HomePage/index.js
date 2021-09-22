@@ -13,20 +13,20 @@ import fimag1 from "../../images/logo/fimag1.png";
 const HomePage = (props) => {
   return(
     <Layout>
-<<<<<<< HEAD
-      Home Page 
-      <a className="fimag1">
+
+     
+      <div className="fimag1">
           <a href="">
             <img src={fimag1} className="logoimage" alt="" />
             <a style={{ marginTop: "-10px" }}>
               </a>
           </a>
         
-        </a>
+        </div>
       
-=======
+
       Home Page  
->>>>>>> f78879daeb294191ab1a63b26ddb1aff2160dc1a
+
     </Layout>
    )
 
