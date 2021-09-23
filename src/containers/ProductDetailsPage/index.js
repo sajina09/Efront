@@ -113,7 +113,8 @@ console.log(product.productDetails)
               <a href="#">Fruits</a>
 {/*              <a href="#">{category.categories[0].children[0].name}</a>
  */}                 <IoIosArrowForward />
-            
+              </li>
+
               <li>
                 <a href="#">Summer Fruits</a>
                 <IoIosArrowForward />
