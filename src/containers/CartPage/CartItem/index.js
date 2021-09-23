@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { generatePublicUrl } from "../../../urlConfig";
 import "./style.css";
 
 /**
@@ -8,6 +9,7 @@ import "./style.css";
 
 const CartItem = (props) => {
   const [qty, setQty] = useState(props.cartItem.qty);
+  console.log(qty);
   const [pric, setPrice] = useState(props.cartItem.price);
   console.log({pric});
   const { _id, name, img , price} = props.cartItem;
@@ -21,17 +23,18 @@ const CartItem = (props) => {
     setQty(qty - 1);
     props.onQuantityDec(_id, qty - 1);
   };
+  
 
   return (
     <div className="cartItemContainer">
       <div className="flexRow">
         <div className="cartProImgContainer">
-          <img src={img} alt={""} />
+          <img src={generatePublicUrl(img)} alt={""} />
         </div>
         <div className="cartItemDetails">
           <div>
             <p>{name}</p>
-            <p>Rs. {price}</p>
+            <p>Rs. {price*qty}</p>
           </div>
           <div>Delivery in 3 - 5 days</div>
         </div>
@@ -49,7 +52,7 @@ const CartItem = (props) => {
           
           <button onClick={onQuantityIncrement}>+</button>
         </div>
-        <button className="cartActionBtn">save for later</button>
+        <button className="cartActionBtn">Save for later</button>
         <button
           className="cartActionBtn"
           onClick={() => props.onRemoveCartItem(_id)}

@@ -12,7 +12,6 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { login, signout, getCartItems, signup as _signup } from "../../actions";
 import Cart from "../UI/Cart";
-
 /**
  * @author
  * @function Header
@@ -256,10 +255,11 @@ const Header = (props) => {
             ]}
           />
           <div>
-            <a href={`/cart`} className="cart">
-              <Cart count={Object.keys(cart.cartItems).length} />
-              <span style={{ margin: "0 10px", }}>Cart</span>
-            </a>
+            <a href={`/cart`} className="cart"> 
+            <Cart count={Object.keys(cart.cartItems).length} />
+              <span style={{ margin: "0 10px" }}>Cart</span>
+             </a>
+
           </div>
         </div>
         {/* right side menu ends here */}
