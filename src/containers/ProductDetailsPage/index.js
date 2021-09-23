@@ -55,7 +55,7 @@ console.log(product.productDetails)
   return (
     <Layout>
       {/* <div>{product.productDetails.name}</div> */}
-      <div className="productDescriptionContainer">
+      
         <div className="flexRow">
           <div className="verticalImageStack">
             {product.productDetails.productPictures.map((thumb, index) => (
@@ -103,7 +103,7 @@ console.log(product.productDetails)
         </div>
         <div>
           {/* home > category > subCategory > productName */}
-          <div className="breed">
+          //{/* <div className="breed">
             <ul>
               <li>
                 <a href="#">Home</a>
@@ -114,6 +114,7 @@ console.log(product.productDetails)
 {/*              <a href="#">{category.categories[0].children[0].name}</a>
  */}                 <IoIosArrowForward />
               </li>
+
               <li>
                 <a href="#">Summer Fruits</a>
                 <IoIosArrowForward />
@@ -121,8 +122,7 @@ console.log(product.productDetails)
               <li>
                 <a href="#">{product.productDetails.name}</a>
               </li>
-            </ul>
-          </div>
+            
           {/* product description */}
           <div className="productDetails">
             <p className="productTitle">{product.productDetails.name}</p>
@@ -144,7 +144,6 @@ console.log(product.productDetails)
                 <div>{product.productDetails.price} </div>
                 {/* <div>{product.productDetails.quantity}</div> */}
               </span>
-             </div>
               <span className="discount" style={{ margin: "0 10px" }}>
                 3% off
               </span>

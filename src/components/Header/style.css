@@ -2,6 +2,8 @@
     width: 100%;
     height: 65px;
     background: #59B791;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+box-sizing: border-box;
 }
 .subHeader{
     max-width: 1100px;
@@ -18,24 +20,24 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: flex-end;
+     
 }
 .logo .logoimage{
     width: 75px;
+    position: absolute;
+left: 10.31%;
+right: 82.78%;
+height: 63px;
+
 
 }
 .exploreText{ 
     font-size: 10px;
     font-style: italic; 
 }
-.plusText{ 
-    font-size: 10px; 
-    margin: 0 2px; 
-    text-transform: capitalize;
-    font-style: italic;
-    color: yellow;
-  }
+
 .logo .goldenStar{
     width: 10px;
     height: 10px;
@@ -44,11 +46,15 @@
 .searchInputContainer {
     width: 560px;
     position: relative;
-    background: #fff;
     height: 36px;
     border-radius: 1px;
     overflow: hidden;
     display: flex;
+
+   background: #FFFFFF;
+   border: 1px solid #000000;
+   box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 .searchInput {
     width: 518px;
@@ -64,11 +70,14 @@
     justify-content: center;
     align-items: center;
   }
+  
+
   .rightMenu{
     display: flex;
     flex: 1;
     justify-content: flex-end;
     align-items: center;
+    
   }
 .loginButton {
     display: block;
@@ -81,7 +90,16 @@
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+  
+  .loginButton:hover {background-color: #dce4dc}
+
+.loginButton:active {
+  background-color: #dce4dc;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .more, .fullName {
     font-weight: bold;
     color: #fff;
@@ -97,7 +115,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 20px
+    
   }
+  
+
 
 .authContainer{
   color: #212121;
@@ -142,3 +163,26 @@
   padding: 0 30px;
   margin: 40px 0;
 }
+.more{
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 30px;
+  
+  text-align: center;
+  line-height: 30px;
+ 
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+
+
+background: #59B791;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+ 
+
+}
+.more:hover {background-color: #b7cfb8}
+
+
+

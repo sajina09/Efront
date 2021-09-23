@@ -125,7 +125,7 @@ const Header = (props) => {
                 setLoginModal(true);
                 setSignup(true);
               }}
-              style={{ color: "#59B791" }}
+              style={{ color: "#59B791",cursor:"pointer" }}
             >
               Sign Up
             </a>
@@ -226,6 +226,7 @@ const Header = (props) => {
             />
             <div className="searchIconContainer">
               <IoIosSearch
+              
                 style={{
                   color: "#59B791",
                 }}
@@ -242,6 +243,8 @@ const Header = (props) => {
             menu={
               <a className="more">
                 <span>More</span>
+                
+                
                 <IoIosArrowDown />
               </a>
             }
@@ -255,8 +258,8 @@ const Header = (props) => {
             <a href={`/cart`} className="cart"> 
             <Cart count={Object.keys(cart.cartItems).length} />
               <span style={{ margin: "0 10px" }}>Cart</span>
-             </a> 
-           
+             </a>
+
           </div>
         </div>
         {/* right side menu ends here */}

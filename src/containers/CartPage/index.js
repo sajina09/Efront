@@ -88,7 +88,7 @@ const CartPage = (props) => {
             />
           ))}
 
-          <div
+          <div 
             style={{
               width: "100%",
               display: "flex",
@@ -97,9 +97,11 @@ const CartPage = (props) => {
               boxShadow: "0 0 10px 10px #eee",
               padding: "10px 0",
               boxSizing: "border-box",
+            
             }}
           >
-            <div style={{ width: "250px" }}>
+            <div style={{ width: "250px"
+           }}>
               <MaterialButton
                 title="PLACE ORDER"
                 onClick={() => props.history.push(`/checkout`)}
