@@ -10,14 +10,32 @@ import "./style.css";
 import { addToCart } from "../../actions";
 import { generatePublicUrl } from "../../urlConfig";
 
-/**
- * @author
- * @function ProductDetailsPage
- **/
+
 
 const ProductDetailsPage = (props) => {
   const dispatch = useDispatch();
+  const category = useSelector(state => state.category);
+  console.log({category});
   const product = useSelector((state) => state.product);
+
+  const renderCategories = (categories) => {
+    let myCategories = [];
+    for (let category of categories) {
+      myCategories.push(
+        <li key={category.name}>
+          {
+            category.parentId ? <a
+              href={`/${category.slug}?cid=${category._id}&type=${category.type}`}>
+              {category.name}
+            </a> :
+            <span>{category.name}</span>
+          }
+          {category.children.length > 0 ? (<ul>{renderCategories(category.children)}</ul>) : null}
+        </li>
+      );
+    }
+    return myCategories;
+  }
 
   useEffect(() => {
     const { productId } = props.match.params;
@@ -33,11 +51,11 @@ const ProductDetailsPage = (props) => {
   if (Object.keys(product.productDetails).length === 0) {
     return null;
   }
-
+console.log(product.productDetails)
   return (
     <Layout>
       {/* <div>{product.productDetails.name}</div> */}
-      <div className="productDescriptionContainer">
+      
         <div className="flexRow">
           <div className="verticalImageStack">
             {product.productDetails.productPictures.map((thumb, index) => (
@@ -85,16 +103,17 @@ const ProductDetailsPage = (props) => {
         </div>
         <div>
           {/* home > category > subCategory > productName */}
-          <div className="breed">
+          //{/* <div className="breed">
             <ul>
               <li>
                 <a href="#">Home</a>
                 <IoIosArrowForward />
               </li>
               <li>
-                <a href="#">Fruits</a>
-                <IoIosArrowForward />
-              </li>
+              <a href="#">Fruits</a>
+{/*              <a href="#">{category.categories[0].children[0].name}</a>
+ */}                 <IoIosArrowForward />
+            
               <li>
                 <a href="#">Summer Fruits</a>
                 <IoIosArrowForward />
@@ -102,8 +121,7 @@ const ProductDetailsPage = (props) => {
               <li>
                 <a href="#">{product.productDetails.name}</a>
               </li>
-            </ul>
-          </div>
+            
           {/* product description */}
           <div className="productDetails">
             <p className="productTitle">{product.productDetails.name}</p>
@@ -112,7 +130,7 @@ const ProductDetailsPage = (props) => {
                 4.3 <IoIosStar />
               </span>
               <span className="ratingNumbersReviews">
-                72,234 Ratings & 8,140 Reviews
+                10 Ratings & 57 Reviews
               </span>
             </div>
             <div className="extraOffer">
@@ -125,9 +143,8 @@ const ProductDetailsPage = (props) => {
                 <div>{product.productDetails.price} </div>
                 {/* <div>{product.productDetails.quantity}</div> */}
               </span>
-             </div>
               <span className="discount" style={{ margin: "0 10px" }}>
-                2% off
+                3% off
               </span>
               <br/>
               
@@ -164,6 +181,49 @@ const ProductDetailsPage = (props) => {
                   {product.productDetails.description}
                 </span>
               </p>
+              <p style={{ display: "flex" }}>
+                <span
+                  style={{
+                    width: "100px",
+                    fontSize: "12px",
+                    color: "#878787",
+                    fontWeight: "600",
+                    marginRight: "20px",
+                  }}
+                >
+                  Manufacture :
+                </span>
+                <span
+                  style={{
+                    fontSize: "12px",
+                    color: "#212121",
+                  }}
+                >
+                  {product.productDetails.manufacture}
+                </span> 
+              </p>
+              <p style={{ display: "flex" }}>
+                <span
+                  style={{
+                    width: "100px",
+                    fontSize: "12px",
+                    color: "#878787",
+                    fontWeight: "600",
+                    marginRight: "20px",
+                  }}
+                >
+                  Expiry date : 
+                </span>
+                <span
+                  style={{
+                    fontSize: "12px",
+                    color: "#212121",
+                  }}
+                >
+                  {product.productDetails.expiry}
+                </span>
+              </p>
+             
             </div>
           </div>
         </div>
