@@ -173,3 +173,14 @@
 .more:hover {
   background-color: #b7cfb8;
 }
+
+.call a{
+color: white;
+font-size: 1rem;
+
+}
+.call a:hover{
+background-color: rgb(19, 122, 170);
+font-size: 1.3rem;
+
+}

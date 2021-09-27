@@ -10,7 +10,6 @@ import CartPage from "./containers/CartPage";
 import CheckoutPage from "./containers/CheckoutPage";
 import OrderPage from "./containers/OrderPage";
 import OrderDetailsPage from "./containers/OrderDetailsPage";
-import TestPage from "./containers/TestPage/test";
 
 function App() {
   const dispatch = useDispatch();

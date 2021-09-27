@@ -9,9 +9,6 @@ import "./style.css";
 
 const CartItem = (props) => {
   const [qty, setQty] = useState(props.cartItem.qty);
-  console.log(qty);
-  const [pric, setPrice] = useState(props.cartItem.price);
-  console.log({pric});
   const { _id, name, img , price} = props.cartItem;
   const onQuantityIncrement = () => {
     setQty(qty + 1);
