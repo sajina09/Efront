@@ -1,12 +1,13 @@
 .menuHeader{
     width: 100%;
-    height: 40px;
+    height: 60px;
     background: #fff;
     border-bottom: 1px solid #cecece;
     box-shadow: 0 2px 2px -2px #333;
 }
 .menuHeader ul{
     list-style: none;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -17,13 +18,14 @@
 }
 .menuHeader > ul > li > span{
     display: block;
-    line-height: 40px;
+    line-height: 4rem;
     cursor: pointer;
     padding: 0 20px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 .menuHeader > ul > li > span:hover{
-    color: #59b795;
+    background-color: #59b795;
+    border-radius: 10%;
 }
 .menuHeader > ul > li > ul{
     position: absolute;
@@ -41,17 +43,25 @@
     margin: 0 20px;
     min-width: 150px;
 }
+.menuHeader > ul > li > ul > li:hover{
+    border-radius: 5%;
+
+}
 .menuHeader > ul > li > ul > li{
     float: left;
 }
+
 .menuHeader > ul > li > ul > li > a{
     font-weight: bold;
     display: block;
 }
+.menuHeader > ul > li > ul > li > a:hover{
+    background-color: #59b795;
+}
 .menuHeader > ul > li > ul > li a{
     padding: 3px 0;
     display: block;
-    font-size: 12px;
+    font-size: 1rem;
     text-decoration: none;
     color: #707070;
 }

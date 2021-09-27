@@ -24,7 +24,6 @@ const Header = (props) => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
@@ -73,17 +72,12 @@ const Header = (props) => {
         menu={<a className="fullName">{auth.user.fullName}</a>}
         menus={[
           { label: "My Profile", href: "", icon: null },
-          { label: "Deal Zone", href: "", icon: null },
           {
             label: "Orders",
             href: `/account/orders`,
             icon: null,
           },
-          { label: "Wishlist", href: "", icon: null },
-          { label: "Coupons", href: "", icon: null },
-          { label: "Rewards", href: "", icon: null },
           { label: "Notifications", href: "", icon: null },
-          { label: "Gift Cards", href: "", icon: null },
           { label: "Logout", href: "", icon: null, onClick: logout },
         ]}
       />
@@ -216,7 +210,7 @@ const Header = (props) => {
         {/* search component */}
         <div
           style={{
-            padding: "0 10px",
+            padding: "0 50px",
           }}
         >
           <div className="searchInputContainer">
