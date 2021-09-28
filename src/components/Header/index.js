@@ -26,6 +26,7 @@ const Header = (props) => {
   const [password, setPassword] = useState("");
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const [search, search] = useState("");
 
   // state cart value
   const cart = useSelector((state) => state.cart);
@@ -85,6 +86,7 @@ const Header = (props) => {
   };
 
   const renderNonLoggedInMenu = () => {
+   
     return (
       <DropdownMenu
         menu={
@@ -128,6 +130,14 @@ const Header = (props) => {
       />
     );
   };
+ 
+/* 
+  search(key)
+  {
+    console.log(key);
+  } */
+ 
+  
 
   return (
     <div className="header">
@@ -215,8 +225,10 @@ const Header = (props) => {
         >
           <div className="searchInputContainer">
             <input
+              //type="text"
               className="searchInput"
               placeholder={"search for products, brands and more"}
+              //onChange={(e)=>search(e.target.value)}
             />
             <div className="searchIconContainer">
               <IoIosSearch

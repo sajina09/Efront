@@ -77,7 +77,7 @@ const HomePage = (props) => {
         <h1>Ongoing events</h1>
       </div>
       <div className="home-page">
-         <Carousel slides={slides} autoplay={true} interval={1000}/>      
+         <Carousel slides={slides} autoplay={true} interval={10000}/>      
         <div className="heading">
         <h1>Deals of the day</h1>
       </div>
